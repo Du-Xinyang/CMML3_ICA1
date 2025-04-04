@@ -37,18 +37,18 @@ alias gmx="/software/gromacs-2024.3/build/bin/gmx_mpi"
     gmx mdrun -deffnm md_300K_50ns -nb gpu -ntomp 8
 
 # MD results analysis
-(1) To account for any periodicity in the system
-    gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns.xtc -o md_300K_50ns_noPBC.xtc -pbc mol -center     # Choose "Protein", choose "System" as output
-(2) Structural stability analysis. Relative to the structure present in the minimized, equilibrated system.
-    gmx rms -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o rmsd_300K_50ns.xvg -tu ns     # Choose "Protein", choose "System" as output
-(3) Structural stability analysis. Relative to the crystal structure.
-    gmx rms -s em.tpr -f md_300K_50ns_noPBC.xtc -o rmsd_xtal.xvg      #Choose "Backbone", choose "System" as output
-(4) The radius of gyration of a protein is a measure of its compactness. If a protein is stably folded, it will likely maintain a relatively steady value of Rg. If a protein unfolds, its Rg will change over time
-    gmx gyrate -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o gyrate_300K_50ns.xvg     # Choose "Protein"
-(5) Extract the last frame structure (assuming a total simulation duration of 50 ns)
-    gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o final_300K.pdb -dump 50000      #Choose "Protein"
-(6) Extract structures within a specific time range (such as the last 10 ns)
-    gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -b 40000 -e 50000 -o last10ns_300K.pdb# -b 40 (ns) -e 50 (ns)     #Choose "Protein"
+(1) To account for any periodicity in the system   # Choose "Protein", choose "System" as output
+    gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns.xtc -o md_300K_50ns_noPBC.xtc -pbc mol -center     
+(2) Structural stability analysis. Relative to the structure present in the minimized, equilibrated system.     # Choose "Protein", choose "System" as output
+    gmx rms -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o rmsd_300K_50ns.xvg -tu ns   
+(3) Structural stability analysis. Relative to the crystal structure.    #Choose "Backbone", choose "System" as output
+    gmx rms -s em.tpr -f md_300K_50ns_noPBC.xtc -o rmsd_xtal.xvg      
+(4) The radius of gyration     # Choose "Protein"
+    gmx gyrate -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o gyrate_300K_50ns.xvg    
+(5) Extract the last frame structure (assuming a total simulation duration of 50 ns)     #Choose "Protein"
+    gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o final_300K.pdb -dump 50000      
+(6) Extract structures within a specific time range (such as the last 10 ns)     #Choose "Protein"
+    gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -b 40000 -e 50000 -o last10ns_300K.pdb# -b 40 (ns) -e 50 (ns)     
 
 
 
