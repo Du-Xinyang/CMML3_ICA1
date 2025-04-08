@@ -1,3 +1,0 @@
-load final_280K
-load fold_af3_1r0r_model_1
-align fold_af3_1r0r_model_1, final_280K
