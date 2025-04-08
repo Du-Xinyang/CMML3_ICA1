@@ -1,5 +1,7 @@
+# Locate software
 alias gmx="/software/gromacs-2024.3/build/bin/gmx_mpi"
 
+# Run GROMACS
 (1) Generate topology file, position restraint file and the post-processed structure file   #Choose amber99sb-ildn
     gmx pdb2gmx -f 1r0r_clean.pdb -o complex_processed.gro -water spce  
 (2) Define the box
