@@ -18,4 +18,6 @@ Code is deposited in the **PyMol** folder.
 ## Statistical analysis & Visualisation ##
 ### Reproducibility validation ###
 Code is deposited in the **R/Reproducibility Validation** folder.
-Validating reproducibility through analyzing processes including energy minimization, temperature equilibration, pressure equilibration, density equilibration, and 
+Validating reproducibility through analyzing processes including energy minimization, temperature equilibration, pressure equilibration, and density equilibration.
+### RMSD and Rg Comparison ###
+Code is deposited in the **R/RMSD_Rg** folder.
