@@ -17,13 +17,13 @@ Code is deposited in the **PyMol** folder.
 2. Alignment of MD model and AF3 model. AF3 model obtained by inputting sequence of SC-OMTKY3 at AlphaFoldServer website: https://alphafoldserver.com/welcome
 ## Statistical analysis & Visualisation ##
 ### Reproducibility validation ###
-Code is deposited in the **R/Reproducibility Validation** folder.
+Code is deposited in the **R/Reproducibility Validation.R**.
 Validating reproducibility through analyzing processes including energy minimization, temperature equilibration, pressure equilibration, and density equilibration.
 ### RMSD and Rg Comparison ###
-Code is deposited in the **R/RMSD_Rg** folder.
+Code is deposited in the **R/RMSD_Rg.R**.
 1. For the RMSD comparison, code for generating RMSD for the replicates at each temperature and for comparing RMSD at different temperatures in a limited time period from 20 to 25 ns were provided.
 2. For the Rg comparison, code for generating RMSD for the replicates at each temperature and for comparing Rg at different temperatures in the whole 50ns or in a limited time period from 15 to 25 ns were provided.
 ### DSSP result visualisation ###
-Code for generating the stacked bar chart of secondary structureis deposited in the **R/DSSP** folder. Input requires dssp.xvg obtained from GROMACS.
+Code for generating the stacked bar chart of secondary structureis deposited in the **R/DSSP.R**. Input requires dssp.xvg obtained from GROMACS.
 
 
