@@ -24,4 +24,6 @@ Code is deposited in the **R/RMSD_Rg** folder.
 1. For the RMSD comparison, code for generating RMSD for the replicates at each temperature and for comparing RMSD at different temperatures in a limited time period from 20 to 25 ns were provided.
 2. For the Rg comparison, code for generating RMSD for the replicates at each temperature and for comparing Rg at different temperatures in the whole 50ns or in a limited time period from 15 to 25 ns were provided.
 ### DSSP result visualisation ###
-Code for generating the stacked bar chart of secondary structureis deposited in the **R/DSSP** folder. Input requires 
+Code for generating the stacked bar chart of secondary structureis deposited in the **R/DSSP** folder. Input requires dssp.xvg obtained from GROMACS.
+
+
