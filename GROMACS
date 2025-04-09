@@ -1,17 +1,16 @@
-```bash
-# ------------------------------
-# 1. Software Configuration
-# ------------------------------
+#------------------------------#
+###1. Software Configuration###
+#------------------------------#
 
-# Locate GROMACS executable (modify path according to your installation)
+# Locate GROMACS executable
 alias gmx="/software/gromacs-2024.3/build/bin/gmx_mpi"
 
 
-# ------------------------------
-# 2. System Preparation
-# ------------------------------
+# ------------------------------ #
+# 2. System Preparation #
+# ------------------------------ #
 
-### (1) Generate topology files
+###(1) Generate topology files###
 # Forcefield: amber99sb-ildn | Water model: SPC/E
 gmx pdb2gmx -f 1r0r_clean.pdb -o complex_processed.gro -water spce
 
@@ -93,8 +92,6 @@ gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o final_300K.pdb -dum
 
 # Last 10ns trajectory
 gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -b 40000 -e 50000 -o last10ns_300K.pdb <<< "1"
-```
 
-```
 
 
