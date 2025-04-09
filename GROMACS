@@ -10,7 +10,7 @@ alias gmx="/software/gromacs-2024.3/build/bin/gmx_mpi"
 # 2. System Preparation #
 # ------------------------------ #
 
-###(1) Generate topology files###
+***(1) Generate topology files***
 # Forcefield: amber99sb-ildn | Water model: SPC/E
 gmx pdb2gmx -f 1r0r_clean.pdb -o complex_processed.gro -water spce
 
