@@ -12,8 +12,10 @@ Code tempelate for running a MD simulation under a certain temperature was provi
 2. ΔG and hydrogen bond numbers were obtained from **Interfaces**.
 3. Residues that form hydrogen bonds and their buried surface area were obtained from **Details**.
 ### PyMol Typical Workflow ###
-Code are deposited in the **PyMol** folder.
+Code is deposited in the **PyMol** folder.
 1. Visualize hydrogen bond. 
 2. Alignment of MD model and AF3 model.
 ## Statistical analysis & Visualisation ##
 ### Reproducibility validation ###
+Code is deposited in the **R/Reproducibility Validation** folder.
+Validating reproducibility through analyzing processes including energy minimization, temperature equilibration, pressure equilibration, density equilibration, and 
