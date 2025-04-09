@@ -1,5 +1,5 @@
 # SC-OMTKY3 complex stability analysis
-## Requirements
+## Software Requirements
 1. GROMACS 2024.3
 1. PyMOL 2.5.7
 1. R 4.3.3
