@@ -21,5 +21,5 @@ Code is deposited in the **R/Reproducibility Validation** folder.
 Validating reproducibility through analyzing processes including energy minimization, temperature equilibration, pressure equilibration, and density equilibration.
 ### RMSD and Rg Comparison ###
 Code is deposited in the **R/RMSD_Rg** folder.
-1. For the RMSD comparison, code for comparing RMSD at different temperatures in a limited time period from  was provided.
-2. For the Rg comparison, code for comparing Rg at different temperatures in the whole 50ns and in a limited time period was provided.
+1. For the RMSD comparison, code for generating RMSD for the replicates at each temperature and for comparing RMSD at different temperatures in a limited time period from 20 to 25 ns were provided.
+2. For the Rg comparison, code for generating RMSD for the replicates at each temperature and for comparing Rg at different temperatures in the whole 50ns and in a limited time period from  was provided.
