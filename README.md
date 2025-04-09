@@ -14,7 +14,7 @@ Code tempelate for running a MD simulation under a certain temperature was provi
 ### PyMol Typical Workflow ###
 Code is deposited in the **PyMol** folder.
 1. Visualize hydrogen bond. 
-2. Alignment of MD model and AF3 model.
+2. Alignment of MD model and AF3 model. AF3 model obtained by inputting sequence of SC-OMTKY3 at AlphaFoldServer website: https://alphafoldserver.com/welcome
 ## Statistical analysis & Visualisation ##
 ### Reproducibility validation ###
 Code is deposited in the **R/Reproducibility Validation** folder.
