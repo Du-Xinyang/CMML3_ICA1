@@ -93,6 +93,7 @@ gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o final_300K.pdb -dum
 
 # Last 10ns trajectory
 gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -b 40000 -e 50000 -o last10ns_300K.pdb <<< "1"
+```
 
 ```
 
