@@ -50,3 +50,6 @@ alias gmx="/software/gromacs-2024.3/build/bin/gmx_mpi"
     gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -o final_300K.pdb -dump 50000      
 (6) Extract structures within a specific time range (such as the last 10 ns)     #Choose "Protein"
     gmx trjconv -s md_300K_50ns.tpr -f md_300K_50ns_noPBC.xtc -b 40000 -e 50000 -o last10ns_300K.pdb# -b 40 (ns) -e 50 (ns)
+
+# Running DSSP
+    gmx dssp -f md_320K_50ns_noPBC.xtc -s md_320K_50ns.tpr -o ss_320K_50ns.dat -num dssp.xvg
