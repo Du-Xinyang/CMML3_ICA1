@@ -5,10 +5,16 @@
 1. R 4.3.3
 1. PISA 2.0.6
 ## Molecular Dynamics Simulation ##
-Code tempelate for running a MD simulation under a certain temperature was provided in the **GROMACS.sh**. Files including md_short.mdp, nvt.mdp, and npt.mdp should be modified to corresponding temperature during each simulation.
+Code tempelate for running a MD simulation under a certain temperature was provided in the **GROMACS.sh**. The input is the 1r0r.pdb file obtained from PDB database and that has removed water molecule, which can be done in PyMol by: 
+```bash
+load 1r0r.pdb
+remove resn HOH
+save 1r0r_clean.pdb, 1r0r
+```
+Files including md_short.mdp, nvt.mdp, and npt.mdp should be modified to corresponding temperature during each simulation.
 ## Visualisation & Stability Analysis ## 
 ### PISA Typical Workflow ###
-1. Upload structure at each temperature to PISA web interface: https://www.ebi.ac.uk/msd-srv/prot_int/pistart.html
+1. Upload MD pdb structure at each temperature to PISA web interface: https://www.ebi.ac.uk/msd-srv/prot_int/pistart.html
 2. ΔG and hydrogen bond numbers were obtained from **Interfaces**.
 3. Residues that form hydrogen bonds and their buried surface area were obtained from **Details**.
 ### PyMol Typical Workflow ###
