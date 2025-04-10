@@ -1,7 +1,8 @@
-setwd("D:/CMML3/ICA/R_result/DSSP/")
 library(tidyr)
+library(ggplot2)
 # Receives DSSP.xvg (here renamed to T320.svg)
 #### Change the input when changing temperature. 
+setwd("D:/CMML3/ICA/R_result/DSSP/")
 T320 <- read.table("T320.xvg", sep = "" , header = FALSE , skip = 33, na.strings = "",
                    stringsAsFactors = FALSE)
 colnames(T320)<-c("Time","α-helix","β-bridge","β-sheet","3_10-helix","Π-helix","PPII helix","bend","turn","break","loop")
