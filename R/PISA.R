@@ -1,3 +1,4 @@
+# load the packages
 library(ggplot2)
 library(dplyr)
 library(openxlsx)
@@ -5,7 +6,7 @@ library(tidyr)
 library(ggrepel)
 library(scales)
 ############################# ΔG comparison #############################
-# create dataframe
+# create the data frame based on ΔG values and p values obtained from PISA.
 data <- data.frame(
   Group = c("T280", "T300", "T320", "T280", "T300", "T320"),
   Value = c(-5.9, -8.3, -8.5, 0.432, 0.303, 0.188),
@@ -23,7 +24,7 @@ pvalue_data <- pvalue_data %>%
     Value < 0.5 ~ "*",
     TRUE ~ "ns"
   ))
-# draw graph
+# draw the graph using ggplot2
 ggplot() +
   # Draw a Δ G bar chart
   geom_col(data = deltaG_data, 
@@ -47,10 +48,10 @@ ggplot() +
 
 
 ############################# Hbond comparison #############################
-# Read the data
+# Read the data that records the hydrogen bond number at different temperatures from PISA result
 H<- read.xlsx("Hbond.xlsx")
 colnames(H)<-c('Temperature',"Hbond_num")
-# Draw the graph
+# Draw the graph using ggplot2
 ggplot(H,aes(x= Temperature,y=Hbond_num,color = Temperature)) + 
   geom_bar(stat = "identity",aes(fill= Temperature)) +
   theme_minimal() +  
@@ -69,8 +70,9 @@ ggplot(H,aes(x= Temperature,y=Hbond_num,color = Temperature)) +
 
 
 ############################# Buried Surface Area Comparison #############################
-# Read the data
+# Read the data generated from PISA buried surface area result
 data <- read.xlsx("Buried_areas.xlsx")
+
 # Transfer data format to long format
 data_long <- data %>%
   pivot_longer(
@@ -78,6 +80,7 @@ data_long <- data %>%
     names_to = "Temperature",  
     values_to = "Value"  
   )
+
 # Data preprocessing
 data_long <- data %>%
   #Convert temperature values to numerical values and create unique residue identifiers
@@ -91,7 +94,7 @@ data_long <- data %>%
     Residue_ID = paste(Chain, Residue, sep = ": ") #Create a unique identifier
   ) 
 
-# Draw the graph
+# Draw the graph using ggplot2
 ggplot(data_long, aes(x = Temperature, y = Value)) +
   geom_line(aes(color = Chain, group = Residue_ID), 
             linewidth = 0.8, alpha = 0.8) +
