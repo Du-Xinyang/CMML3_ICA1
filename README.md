@@ -1,9 +1,9 @@
 # SC-OMTKY3 complex stability analysis
 ## Software Requirements
-1. GROMACS 2024.3
 1. PyMOL 2.5.7
 1. R 4.3.3
 1. PISA 2.0.6
+1. GROMACS 2024.3
 ## Molecular Dynamics Simulation ##
 Code tempelate for running a MD simulation under a certain temperature was provided in the **GROMACS.sh**. The input is the 1r0r.pdb file obtained from PDB database and that has removed water molecule, which can be done in PyMol by: 
 ```bash
